@@ -276,7 +276,7 @@
             <div class="page-ribbon">♡ &nbsp; A FAVOURITE MEMORY &nbsp; ♡</div>
             <div class="flip-photo">
               
-              <img id="flipImage" src="mel-picture.jpg" alt="Our special memory" style="display:block">
+              <img id="flipImage" src="images/mel-picture.jpg" alt="Our special memory" style="display:block">
             </div>
             <div class="flip-caption" id="flipCaption">A moment I wish I could pause and keep forever. You make it special just by being in it. ♡</div>
           </div>
@@ -296,23 +296,16 @@
     <section class="panel" style="text-align:center">
       <h2>A little something I made for you 🎬</h2>
       <p>Whenever you miss me, press play. I hope this makes you smile. ❤️</p>
-      <div class="youtube-frame video-poster" id="youtubeFrame">
-        <div class="video-placeholder" id="videoPlaceholder">
-          <span class="placeholder-icon">♡</span>
-          <strong>Our little video is waiting for you</strong>
-          <span>A little trip down memory lane. 🌷</span>
-          <a
-            class="video-play-button"
-            href="https://drive.google.com/file/d/1FjUekl8kRqu4RdjVHJYAcO5vq5TEanLD/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Play our special video">
-            <span class="play-triangle" aria-hidden="true">▶</span>
-            <span>PLAY VIDEO</span>
-          </a>
-          <span class="video-small-note">Tap to watch♡</span>
-        </div>
+      <div class="youtube-frame" id="youtubeFrame">
+        <iframe
+          src="https://drive.google.com/file/d/1vKFwijFaJBWAMtCt0zvQ9BTUCndBpxyT/preview"
+          title="Our special video"
+          allow="autoplay; fullscreen"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
       </div>
+      <span class="video-small-note">Tap to watch♡</span>
       <p class="hint"></p>
     </section>
 
@@ -322,8 +315,7 @@
     </footer>
   </main>
   <script>
-    // The play button opens the shared Google Drive video in a new tab.
-    // Google Drive sharing must be set to: Anyone with the link — Viewer.
+    // Embedded Google Drive video. Sharing must be: Anyone with the link — Viewer.
     const envelope = document.getElementById('envelope');
     envelope.addEventListener('click', () => {
       const isOpen = envelope.classList.toggle('open');
@@ -404,7 +396,6 @@
 
     // One special photo for the memory frame.
     const flipImage = document.getElementById("flipImage");
-    const photoEmpty = document.getElementById("photoEmpty");
 
   </script>
 </body>
